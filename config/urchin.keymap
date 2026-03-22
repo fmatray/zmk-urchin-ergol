@@ -263,8 +263,6 @@
 
 		// Only Windows, sorry
 
-
-
 		a_e: a_e {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -377,13 +375,13 @@
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
-			&kp ESC   	  	&none				&none 	   				&kp LC(LS(V))			&kp LC(FR_A)    				&kp PG_UP  	 		&kp HOME  			&kp UP 	 			&kp END 	 		&kp CAPS
-			&sk LALT		&sk LGUI			&sk LSHIFT				&sk LCTRL				&sk RALT						&kp LEFT			&kp DOWN			&kp RIGHT			&kp K_APP			&none
-			&kp LG(FR_L)	&kp LC(LEFT)		&kp LC(RIGHT)			&kp LG(LEFT)			&kp LG(RIGHT)					&kp LA(BSPC)		&kp BSPC			&kp DEL				&none				&none
+			&kp ESC			&kp LC(LS(TAB))					&kp LC(TAB)				&kp LG(LS(TAB))			&kp LG(TAB)						&qt HOME PG_UP		&kp UP				&qt END PG_DN		&none				&kp CAPS
+			&sk LALT		&sk LGUI						&sk LSHIFT				&sk LCTRL				&sk RALT						&kp LEFT			&kp DOWN			&kp RIGHT			&kp K_APP			&none
+			&kp LG(FR_L)	&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LG(LEFT)			&kp LG(RIGHT)					&kp LA(BSPC)		&kp BSPC			&kp DEL				&none				&none
 																								&trans &kp LCTRL    			&trans  &trans 
 			>;
 		};
-			//&kp ESC			&kp LC(LS(TAB))		&kp LC(TAB)				&kp LG(LS(TAB))			&kp LG(TAB)						&kp PG_UP			&kp UP				&kp PG_DOWN			&none				&kp CAPS
+			
 
 		// Function keys with modifiers
 		fnc_layer {
@@ -408,101 +406,3 @@
 		};
 	};
 };
-/*
-NOT USED
- 
- #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
-         NAME: NAME { \
-            compatible = "zmk,behavior-hold-tap"; \
-            label = ZMK_MACRO_STRINGIFY(NAME); \
-            #binding-cells = <2>; \
-            tapping-term-ms = <350>; \
-            flavor = "tap-preferred"; \
-            quick-tap-ms = <200>; \
-            bindings = <HOLD>, <TAP>; \
-        };
-
-	symbols {
-        TAPHOLD_SYMBOL(aMgrav,&kp FR_AGRV,&a_M_grav )
-        
-        };
-
-a_trem: a_trem {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N2 &kp KP_N8>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-o_trem: o_trem {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N4 &kp KP_N6>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-u_trem: u_trem {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N5 &kp KP_N2>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-		i_M_circ: i_M_circ {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC>
-			, <&macro_press   &kp LS>
-    		, <&macro_tap     &kp FR_I>
-    		, <&macro_release &kp LS>
-    		;
-		};
-		o_M_circ: o_M_circ {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N1 &kp KP_N2>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-		e_M_circ: e_M_circ {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N2>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-		e_M_grav: e_M_grav {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N0>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-*/
