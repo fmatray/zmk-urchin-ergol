@@ -376,7 +376,7 @@
 		ext_layer {
 			display-name = "Mods";
 			bindings = <
-			&kp ESC		&none		&none		&kp LG(LA(LS(V))	&kp LG(FR_A)    		&kp PG_UP  	 	&kp HOME	&kp UP		&kp END		&kp CAPS
+			&kp ESC		&none		&none		&kp LG(LA(LS(V)))	&kp LG(FR_A)    		&kp PG_UP  	 	&kp HOME	&kp UP		&kp END		&kp CAPS
 			&sk LALT	&sk LGUI 	&sk LSHIFT	&sk LCTRL			&sk RALT  				&kp PG_DN 	 	&kp LEFT	&kp DOWN	&kp RIGHT	&none
 			&kp LG(FR_Z) &kp LG(X) &kp LG(C)  &kp LG(V)				&kp TAB					&kp LA(BSPC) 	&kp BSPC	&kp DEL		&none		&none
 													&trans &kp LCTRL    					&trans  &trans 
