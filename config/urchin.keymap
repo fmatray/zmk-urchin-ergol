@@ -345,10 +345,10 @@
 		sht_layer {
 			display-name = "ShortC";
 			bindings = <
-			&kp ESC					&LG(Q)					&kp C_MUTE 				&kp C_VOL_DN 			&kp C_VOL_UP					&none				&none			&none			&none				&kp LC(LA(DEL))
-			&kp LG(FR_A) 			&kp LG(X) 				&kp LG(C)  				&kp LG(V)				&kp LG(LA(LS(V)))    			&kp LG(SPACE)		&none			&none 			&none 				&none 
-			&none 					&none   				&none					&kp LG(FR_Z)			&kp LG(LS(FR_Z))				&none				&none 			&none 			&none				&none
-																											&trans  &kp TAB 				&trans 		&trans 
+			&kp ESC					&none					&qt LG(FR_N) LG(FR_T)		&qt LG(LS(FR_S)) LG(FR_S) 	&qt LG(FR_Q) LG(FR_W)						&kp C_MUTE 			&kp C_VOL_DN 	&kp C_VOL_UP	&none				&kp LC(LA(DEL))
+			&none 					&none					&qt LG(LS(FR_A)) LG(FR_A) 	&qt LG(FR_X) LG(FR_C)  		&qt LG(LA(LS(FR_V))) LG(FR_V)	   			&kp LG(SPACE)		&none			&none 			&none 				&none 
+			&none 					&none   				&none						&kp LG(FR_Z)				&kp LG(LS(FR_Z))							&none				&none 			&none 			&none				&none
+																													&trans  &kp TAB 							&trans 		&trans 
 			>;
 		};
 
