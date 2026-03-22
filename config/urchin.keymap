@@ -61,59 +61,6 @@
 			quick-tap-ms = <500>;
 			bindings = <&kp>, <&kp>;
 		};
-
-
-		// Majuscules accentuées
-
-		// Hold tap on accents to Maj
-		aMgrav: aMgrav { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings = <&a_M_grav> , <&kp>;
-        };
-		iMcirc: iMcirc { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings = <&i_M_circ> , <&i_circ>;
-        };
-		oMcirc: oMcirc { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings = <&o_M_circ> , <&o_circ>;
-        };
-		eMcirc: eMcirc { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings = <&e_M_circ> , <&e_circ>;
-        };
-		eMeacu: eMeacu { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings =<&e_M_eacu> , <&kp>;
-        };
-		eMgrav: eMgrav { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings = <&e_M_grav> , <&kp>;
-        };
 	};
 
 	macros {
@@ -126,45 +73,6 @@
 		};
 
 		// Accents macro
-
-
-		
-		a_circ: a_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp FR_A>
-    		;
-		};
-		e_circ: e_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp FR_E>
-    		;																	
-		};
-		e_M_circ: e_M_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_E)>
-    		;																	
-		};
-		e_M_grav: e_M_grav {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_GRV &kp LS(FR_E)>
-    		;
-		};
 		e_trem: e_trem {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -183,24 +91,6 @@
     		= <&macro_tap     &kp FR_CIRC &kp FR_U>
     		;
 		};
-		i_circ: i_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp FR_I>
-    		;
-		};
-		i_M_circ: i_M_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_I)>
-    		;
-		};
 		i_trem: i_trem {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
@@ -208,33 +98,6 @@
 			tap-ms = <40>;
 			bindings
     		= <&macro_tap     &kp FR_DIAE &kp FR_I>
-    		;
-		};
-		o_circ: o_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp FR_O>
-			;
-		};
-		o_M_circ: o_M_circ {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_CIRC &kp LS(FR_O)>
-    		;
-		};	
-		a_M_grav: a_M_grav {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_tap     &kp FR_GRV &kp LS(FR_A)>
     		;
 		};
 	};
