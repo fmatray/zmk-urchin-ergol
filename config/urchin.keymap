@@ -333,12 +333,18 @@
 		default_layer {
 			display-name = "Base";
 			bindings = <
-			&qt LS(FR_Q) FR_Q 		&qt LS(FR_C) FR_C 		&qt LS(FR_O) FR_O			&qt LS(FR_P) FR_P 		&qt LS(FR_W) FR_W				&qt LS(FR_J) FR_J  		&qt LS(FR_M) FR_M  		&qt LS(FR_D) FR_D		&qt FR_DQUO FR_QUOT		&qt LS(FR_Y) FR_Y 
-			&qt LS(FR_A) FR_A 		&qt LS(FR_S) FR_S 		&qt LS(FR_E) FR_E 			&qt LS(FR_N) FR_N 		&qt LS(FR_F) FR_F         		&qt LS(FR_L) FR_L  		&qt LS(FR_R) FR_R  		&qt LS(FR_T) FR_T		&qt LS(FR_I) FR_I		&qt LS(FR_U) FR_U
-			&qt LS(FR_Z) FR_Z 		&qt LS(FR_X) FR_X 		&qt FR_QUES FR_MINS 		&qt LS(FR_V) FR_V 		&qt LS(FR_B) FR_B         		&qt FR_COLN FR_DOT 		&qt LS(FR_H) FR_H 		&qt LS(FR_G) FR_G		&qt FR_SCLN FR_COMM		&qt LS(FR_K) FR_K
-							           													&td1  &qt LSHIFT SPACE   								&lt SHT ENTER &td0
+			&kp FR_Q 		&kp FR_C 		&kp FR_O					&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
+			&kp FR_A 		&kp FR_S 		&kp FR_E 					&kp FR_N 		&kp FR_F         					&kp FR_L  				&kp FR_R  		&kp FR_T		&kp FR_I				&kp FR_U
+			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 		&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
+							           													&td1  &qt LSHIFT SPACE   			&lt SHT ENTER &td0
 			>;
 		};
+		//	&qt LS(FR_Q) FR_Q 		&qt LS(FR_C) FR_C 		&qt LS(FR_O) FR_O			&qt LS(FR_P) FR_P 		&qt LS(FR_W) FR_W				&qt LS(FR_J) FR_J  		&qt LS(FR_M) FR_M  		&qt LS(FR_D) FR_D		&qt FR_DQUO FR_QUOT		&qt LS(FR_Y) FR_Y 
+		//	&qt LS(FR_A) FR_A 		&qt LS(FR_S) FR_S 		&qt LS(FR_E) FR_E 			&qt LS(FR_N) FR_N 		&qt LS(FR_F) FR_F         		&qt LS(FR_L) FR_L  		&qt LS(FR_R) FR_R  		&qt LS(FR_T) FR_T		&qt LS(FR_I) FR_I		&qt LS(FR_U) FR_U
+		//	&qt LS(FR_Z) FR_Z 		&qt LS(FR_X) FR_X 		&qt FR_QUES FR_MINS 		&qt LS(FR_V) FR_V 		&qt LS(FR_B) FR_B         		&qt FR_COLN FR_DOT 		&qt LS(FR_H) FR_H 		&qt LS(FR_G) FR_G		&qt FR_SCLN FR_COMM		&qt LS(FR_K) FR_K
+
+
+
 		// Used for system short cuts
 		sht_layer {
 			display-name = "ShortC";
@@ -354,10 +360,10 @@
 		accent_layer {
 			display-name = "Accent";
 			bindings = <
-			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  			&kp FR_EURO         		&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
-			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 			&e_trem 		  			&kp FR_PIPE  		&kp FR_UNDS 		&iMcirc 0 0 	&i_trem 	 	&kp FR_UGRV
-			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         &qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
-																								&trans  &trans   			&trans &trans 
+			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  			&kp FR_EURO         			&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
+			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 			&e_trem 		  				&kp FR_PIPE  		&kp FR_UNDS 		&iMcirc 0 0 	&i_trem 	 	&kp FR_UGRV
+			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         	&qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
+																								&trans  &trans   				&trans &trans 
 			>;
 		};
 		// Numbers and high frequency symbols
