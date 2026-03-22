@@ -114,30 +114,9 @@
             quick-tap-ms = <200>; 
             bindings = <&e_M_grav> , <&kp>;
         };
-		cMcced: cMcced { 
-            compatible = "zmk,behavior-hold-tap"; 
-            #binding-cells = <2>; 
-            tapping-term-ms = <350>; 
-            flavor = "tap-preferred"; 
-            quick-tap-ms = <200>; 
-            bindings = <&c_M_cced> , <&kp>;
-        };
 	};
 
 	macros {
-		// Turn off Windows
-		win_off: win_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <40>;
-            tap-ms = <40>;
-            bindings
-                = <&macro_press   &kp LWIN>
-                , <&macro_tap     &kp FR_X>
-                , <&macro_release &kp LWIN>
-                , <&macro_tap     &kp FR_U &kp FR_U>
-                ;
-        };
 		// sometimes my device thinks a modifier is being held down
 		// pressing all modifiers fixes it.
 		unstick: unstick {
@@ -258,55 +237,6 @@
     		= <&macro_tap     &kp FR_GRV &kp LS(FR_A)>
     		;
 		};
-
-
-
-		// Only Windows, sorry
-
-		a_e: a_e {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N3 &kp KP_N0>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-		o_e: o_e {
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N5 &kp KP_N6>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-		c_M_cced: c_M_cced {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N1 &kp KP_N9 &kp KP_N9>
-    		, <&macro_release &kp LALT>
-    		;
-		};
-		e_M_eacu: e_M_eacu {
-			compatible = "zmk,behavior-macro"; 
-			#binding-cells = <0>;
-			wait-ms = <40>;
-			tap-ms = <40>;
-			bindings
-    		= <&macro_press   &kp LALT>
-    		, <&macro_tap     &kp KP_N0 &kp KP_N2 &kp KP_N0 &kp KP_N1>
-    		, <&macro_release &kp LALT>
-    		;
-		};
 	};
 
 	combos {
@@ -339,11 +269,6 @@
 							           													&td1  &qt LSHIFT SPACE   			&lt SHT ENTER &td0
 			>;
 		};
-		//	&qt LS(FR_Q) FR_Q 		&qt LS(FR_C) FR_C 		&qt LS(FR_O) FR_O			&qt LS(FR_P) FR_P 		&qt LS(FR_W) FR_W				&qt LS(FR_J) FR_J  		&qt LS(FR_M) FR_M  		&qt LS(FR_D) FR_D		&qt FR_DQUO FR_QUOT		&qt LS(FR_Y) FR_Y 
-		//	&qt LS(FR_A) FR_A 		&qt LS(FR_S) FR_S 		&qt LS(FR_E) FR_E 			&qt LS(FR_N) FR_N 		&qt LS(FR_F) FR_F         		&qt LS(FR_L) FR_L  		&qt LS(FR_R) FR_R  		&qt LS(FR_T) FR_T		&qt LS(FR_I) FR_I		&qt LS(FR_U) FR_U
-		//	&qt LS(FR_Z) FR_Z 		&qt LS(FR_X) FR_X 		&qt FR_QUES FR_MINS 		&qt LS(FR_V) FR_V 		&qt LS(FR_B) FR_B         		&qt FR_COLN FR_DOT 		&qt LS(FR_H) FR_H 		&qt LS(FR_G) FR_G		&qt FR_SCLN FR_COMM		&qt LS(FR_K) FR_K
-
-
 
 		// Used for system short cuts
 		sht_layer {
@@ -360,22 +285,25 @@
 		accent_layer {
 			display-name = "Accent";
 			bindings = <
-			&a_circ 			&cMcced 0 FR_CCED 	&o_e 				&oMcirc 0 0  			&kp FR_EURO         			&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
-			&aMgrav 0 FR_AGRV  	&eMeacu 0 FR_EACU 	&eMgrav 0 FR_EGRV 	&eMcirc 0 0 			&e_trem 		  				&kp FR_PIPE  		&kp FR_UNDS 		&iMcirc 0 0 	&i_trem 	 	&kp FR_UGRV
-			&a_e 				&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         	&qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
+			&kp FR_CACI 		&kp FR_CCED 		&kp FR_OE 			&kp FR_OCIR  			&kp FR_EURO         			&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
+			&kp FR_AGRV  		&kp FR_EACU 		&kp FR_EGRV 		&kp FR_ECIR 			&e_trem 		  				&kp FR_PIPE  		&kp FR_UNDS 		&kp FR_LICI 	&i_trem 	 	&kp FR_UGRV
+			&kp FR_AE 			&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         	&qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
 																								&trans  &trans   				&trans &trans 
 			>;
 		};
+
+
 		// Numbers and high frequency symbols
 		num_layer {
 			display-name = "Num";
 			bindings = <
-			&none &none  		&kp FR_GRV 		&kp FR_TILD				&kp FR_PERC					&kp FR_SLSH &kp FR_7 &kp FR_8 &kp FR_9	&kp FR_MINS
-			&none &none  		&kp FR_CIRC  	&kp FR_BSLS 			&kp FR_DOT        			&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
-			&none &kp FR_SUP2  	&kp FR_DIAE 	&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN	 		&kp FR_0 	&kp FR_1 &kp FR_2 &kp FR_3 	&kp FR_EQL
+			&none	&none	&kp FR_GRV 		&kp FR_TILD				&kp FR_PERC					&kp FR_SLSH &kp FR_7 &kp FR_8 &kp FR_9	&kp FR_MINS
+			&none 	&none	&kp FR_CIRC  	&kp FR_BSLS 			&kp FR_DOT        			&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
+			&none 	&none	&kp FR_DIAE 	&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN	 		&kp FR_0 	&kp FR_1 &kp FR_2 &kp FR_3 	&kp FR_EQL
 																		&trans  &trans   			&trans &trans
 			>;
 		};
+
 
 		// Main modifiers and arrow keys
 		nav_layer {
@@ -406,7 +334,7 @@
 				bindings = <
 				&bootloader 	&none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
 				&none 			&none &none &none      &bt BT_SEL 1 			  &bt BT_SEL 4 &none &none 	  &none &none
-				&win_off		&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &none
+				&none			&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &none
 														&trans &trans   		  &trans &trans 
 				>;
 		};

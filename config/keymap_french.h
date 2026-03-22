@@ -122,7 +122,7 @@
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
  * │ • │  │ ë │ “ │ ‘ │ { │ ¶ │ « │ ¡ │ Ç │ ø │ } │ — │       │
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │ ê │ ® │ † │ Ú │ º │ î │   │ π │ ô │ € │     │
+ * │     │ æ │   │ ê │ ® │ † │ Ú │ º │ î │ œ │ π │ ô │ € │     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
  * │      │ ‡ │ Ò │ ∂ │ ƒ │ ﬁ │ Ì │ Ï │ È │ ¬ │ µ │ Ù │ @ │    │
  * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
@@ -147,7 +147,7 @@
 #define FR_MDSH RA(FR_MINS)  // —
 
 // Row 2
-#define FR_AE   RA(FR_A)     // Æ
+#define FR_AE   RA(FR_A)     // æ
 #define FR_CACI RA(FR_Z)     // Â
 #define FR_ECIR RA(FR_E)     // Ê
 #define FR_REGD RA(FR_R)     // ®
@@ -155,7 +155,7 @@
 #define FR_CUAC RA(FR_Y)     // Ú
 #define FR_MORD RA(FR_U)     // º
 #define FR_LICI RA(FR_I)     // î
-#define FR_OE   RA(FR_O)     // Œ
+#define FR_OE   RA(FR_O)     // œ
 #define FR_PI   RA(FR_P)     // π
 #define FR_OCIR RA(FR_CIRC)  // Ô
 #define FR_EURO RA(FR_DLR)   // €
