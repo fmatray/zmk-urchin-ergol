@@ -137,7 +137,7 @@
 			display-name = "Base";
 			bindings = <
 			&kp FR_Q 		&kp FR_C 		&kp FR_O					&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
-			&kp FR_A 		&qt LCTRL FR_S 	&qt LALT FR_E 				&qt LGUI FR_N 	&qt LSHIFT FR_F    					&qt RSHIFT FR_L  		&qt RGUI FR_R	&kp RALT FR_T	&qt RCTRL FR_I			&kp FR_U
+			&kp FR_A 		&qt LCTRL FR_S 	&qt LALT FR_E 				&qt LGUI FR_N 	&qt LSHIFT FR_F    					&qt RSHIFT FR_L  		&qt RGUI FR_R	&qt RALT FR_T	&qt RCTRL FR_I			&kp FR_U
 			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 		&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
 							           													&td1  &qt LSHIFT SPACE   			&lt SHT ENTER &td0
 			>;
@@ -185,7 +185,7 @@
 			&kp ESC			&kp LC(LS(TAB))					&kp LC(TAB)				&kp LG(LS(TAB))			&kp LG(TAB)						&qt HOME PG_UP		&kp UP				&qt END PG_DN		&none				&kp CAPS
 			&sk LALT		&sk LGUI						&sk LSHIFT				&sk LCTRL				&sk RALT						&kp LEFT			&kp DOWN			&kp RIGHT			&kp K_APP			&none
 			&kp LG(FR_L)	&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LG(LEFT)			&kp LG(RIGHT)					&kp LA(BSPC)		&kp BSPC			&kp DEL				&none				&none
-																								&trans &kp LCTRL    			&trans  &trans 
+																											&trans &kp LCTRL    			&trans  &trans 
 			>;
 		};
 			
