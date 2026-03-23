@@ -179,15 +179,14 @@
 			>;
 		};
 
-
 		// Main modifiers and arrow key
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
 			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LS(TAB)				&kp TAB							&kp PG_UP			&kp HOME			&kp UP				&kp END				&kp CAPS
-			&kp LCTRL		&kp LALT						&kp LGUI				&kp LSHIFT				&none							&kp PG_DN			&kp LEFT			&kp DOWN			&kp RIGHT			&none
+			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&none							&kp PG_DN			&kp LEFT			&kp DOWN			&kp RIGHT			&none
 			&none			&none							&none					&kp LG(FR_L)			&none							&kp LA(BSPC)		&kp BSPC			&kp DEL				&none				&none
-																											&trans &trans	    			&trans  &qt K_APP TAB
+																											&trans &trans	    			&trans  &kp K_APP
 			>;
 		};
 
@@ -197,7 +196,7 @@
 			display-name = "Func.";
 			bindings = <
 			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5          &kp F6 	&kp F7 	&kp F8 	&kp F9 	&kp F10 
-			&kp LCTRL	&kp LALT	&kp LGUI	&kp LSHIFT	&none			&none 	&none	&none 	&kp F11 &kp F12
+			&sk LCTRL	&sk LALT	&sk LGUI	&sk LSHIFT	&none			&none 	&none	&none 	&kp F11 &kp F12
 			&none  		&none 		&none  		&none   	&none 			&none   &none 	&none  	&none   &none 
 							  							&trans &trans 		&trans &trans  
 			>;
