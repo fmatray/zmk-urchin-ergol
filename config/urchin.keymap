@@ -149,10 +149,10 @@
 		sht_layer {
 			display-name = "ShortC";
 			bindings = <
-			&kp ESC					&none					&qt LG(FR_N) LG(FR_T)		&qt LG(LS(FR_S)) LG(FR_S) 	&qt LG(FR_Q) LG(FR_W)						&kp C_MUTE 			&kp C_VOL_DN 	&kp C_VOL_UP	&none				&kp LG(LC(FR_Q))
-			&none 					&none					&qt LG(LS(FR_A)) LG(FR_A) 	&qt LG(FR_X) LG(FR_C)  		&qt LG(LA(LS(FR_V))) LG(FR_V)	   			&kp LG(SPACE)		&kp LG(FR_B)	&kp LG(FR_U)	&kp LG(FR_I) 		&none 
-			&kp LG(FR_COMM) 		&none   				&kp LG(FR_R)				&kp LG(FR_Z)				&kp LG(LS(FR_Z))							&none				&none 			&none 			&none				&none
-																													&trans  &kp TAB 							&trans 		&trans 
+			&kp ESC				&qt LG(FR_N) LG(FR_T)		&qt LG(LS(FR_S)) LG(FR_S) 	&qt LG(FR_Q) LG(FR_W)			&none					&none				&kp C_MUTE 		&kp C_VOL_DN 	&kp C_VOL_UP		&kp LG(LC(FR_Q))
+			&none				&qt LG(LS(FR_A)) LG(FR_A) 	&qt LG(FR_X) LG(FR_C)  		&qt LG(LA(LS(FR_V))) LG(FR_V)	&none  					&kp LG(SPACE)		&kp LG(FR_B)	&kp LG(FR_U)	&kp LG(FR_I) 		&none 
+			&kp LG(FR_COMM)		&kp LG(FR_R)				&kp LG(FR_Z)				&kp LG(LS(FR_Z))				&none					&none				&none 			&none 			&none				&none
+																														&trans  &kp TAB			&trans 		&trans 
 			>;
 		};
 
@@ -184,9 +184,9 @@
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
-			&kp ESC			&kp LC(LS(TAB))					&kp LC(TAB)				&kp LG(LS(TAB))			&kp LG(TAB)						&qt HOME PG_UP		&kp UP				&qt END PG_DN		&none				&kp CAPS
-			&none			&kp LCTRL						&kp LALT				&kp LGUI				&kp LSHIFT						&kp LEFT			&kp DOWN			&kp RIGHT			&kp K_APP			&none
-			&kp LG(FR_L)	&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LG(LEFT)			&kp LG(RIGHT)					&kp BSPC			&kp LA(BSPC)			&kp DEL				&none				&none
+			&kp ESC			&kp LC(LS(TAB))					&kp LC(TAB)				&kp LG(LS(TAB))			&kp LG(TAB)						&kp PG_UP			&kp HOME			&kp UP				&kp END				&kp CAPS
+			&kp LCTRL		&kp LALT						&kp LGUI				&kp LSHIFT				&none							&kp PG_DN			&kp LEFT			&kp DOWN			&kp RIGHT			&none
+			&kp LG(FR_L)	&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LG(LEFT)			&kp LG(RIGHT)					&kp LA(BSPC)		&kp BSPC			&kp DEL				&kp K_APP			&none
 																											&trans &kp LCTRL    			&trans  &trans 
 			>;
 		};
@@ -197,7 +197,7 @@
 			display-name = "Func.";
 			bindings = <
 			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5          &kp F6 	&kp F7 	&kp F8 	&kp F9 	&kp F10 
-			&none		&sk LCTRL	&sk LALT	&sk LGUI	&sk LSHIFT		&none 	&none	&none 	&kp F11 &kp F12
+			&kp LCTRL	&kp LALT	&kp LGUI	&kp LSHIFT	&none			&none 	&none	&none 	&kp F11 &kp F12
 			&none  		&none 		&none  		&none   	&none 			&none   &none 	&none  	&none   &none 
 							  							&trans &trans 		&trans &trans  
 			>;
