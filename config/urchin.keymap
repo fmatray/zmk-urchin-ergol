@@ -31,23 +31,25 @@
 / {
 	behaviors {
 
-		// Enables switching between layers Accent and Numbers
-		// by performing a tap-dance sequence.
-		td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <350>;
-            bindings = <&sl ACCENT>, <&sl NUM>;
-        };
-
 		// Enables switching between layers NAV and Function
 		// by performing a tap-dance sequence.
-		td1: tap_dance_1 {
+		td_nav_func: td_nav_func {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
             bindings = <&sl NAV>, <&sl FNC>;
         };
+
+
+		// Enables switching between layers Accent and Numbers
+		// by performing a tap-dance sequence.
+		td_acc_num: td_acc_num {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&sl ACCENT>, <&sl NUM>;
+        };
+
 
 
 		// Enables holding the first mod-tap key
@@ -139,7 +141,7 @@
 			&kp FR_Q 		&kp FR_C 		&kp FR_O					&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
 			&kp FR_A 		&qt LCTRL FR_S 	&qt LALT FR_E 				&qt LGUI FR_N 	&qt LSHIFT FR_F    					&qt RSHIFT FR_L  		&qt RGUI FR_R	&qt RALT FR_T	&qt RCTRL FR_I			&kp FR_U
 			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 		&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
-							           													&td1  &qt LSHIFT SPACE   			&lt SHT ENTER &td0
+							           													&td_nav_func  &qt LSHIFT SPACE   	&lt SHT ENTER &td_acc_num
 			>;
 		};
 
@@ -183,7 +185,7 @@
 			display-name = "Nav";
 			bindings = <
 			&kp ESC			&kp LC(LS(TAB))					&kp LC(TAB)				&kp LG(LS(TAB))			&kp LG(TAB)						&qt HOME PG_UP		&kp UP				&qt END PG_DN		&none				&kp CAPS
-			&kp LALT		&kp LGUI						&kp LSHIFT				&kp LCTRL				&kp RALT						&kp LEFT			&kp DOWN			&kp RIGHT			&kp K_APP			&none
+			&none			&kp LCTRL						&kp LALT				&kp LGUI				&kp LSHIFT						&kp LEFT			&kp DOWN			&kp RIGHT			&kp K_APP			&none
 			&kp LG(FR_L)	&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LG(LEFT)			&kp LG(RIGHT)					&kp BSPC			&kp LA(BSPC)			&kp DEL				&none				&none
 																											&trans &kp LCTRL    			&trans  &trans 
 			>;
@@ -195,7 +197,7 @@
 			display-name = "Func.";
 			bindings = <
 			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5          &kp F6 	&kp F7 	&kp F8 	&kp F9 	&kp F10 
-			&sk LALT 	&sk LGUI 	&sk LSHIFT 	&sk LCTRL 	&sk RALT    	&none 	&none	&none 	&kp F11 &kp F12
+			&none		&sk LCTRL	&sk LALT	&sk LGUI	&sk LSHIFT		&none 	&none	&none 	&kp F11 &kp F12
 			&none  		&none 		&none  		&none   	&none 			&none   &none 	&none  	&none   &none 
 							  							&trans &trans 		&trans &trans  
 			>;
@@ -207,7 +209,7 @@
 				bindings = <
 				&bootloader 	&none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader 
 				&none 			&none &none &none      &bt BT_SEL 1 			  &bt BT_SEL 4 &none &none 	  &none &none
-				&none			&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &none
+				&soft_off		&none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none 	  &none &soft_off
 														&trans &trans   		  &trans &trans 
 				>;
 		};
