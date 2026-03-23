@@ -73,13 +73,13 @@
 		};
 
 		// Accents macro
-		e_trem: e_trem {
+		a_circ: a_circ {
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			wait-ms = <40>;
 			tap-ms = <40>;
 			bindings
-    		= <&macro_tap     &kp FR_DIAE &kp FR_E>
+    		= <&macro_tap     &kp FR_CIRC &kp FR_A>
     		;
 		};
 		u_circ: u_circ {
@@ -89,6 +89,16 @@
 			tap-ms = <40>;
 			bindings
     		= <&macro_tap     &kp FR_CIRC &kp FR_U>
+    		;
+		};
+
+		e_trem: e_trem {
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			wait-ms = <40>;
+			tap-ms = <40>;
+			bindings
+    		= <&macro_tap     &kp FR_DIAE &kp FR_E>
     		;
 		};
 		i_trem: i_trem {
@@ -127,7 +137,7 @@
 			display-name = "Base";
 			bindings = <
 			&kp FR_Q 		&kp FR_C 		&kp FR_O					&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
-			&kp FR_A 		&kp FR_S 		&kp FR_E 					&kp FR_N 		&kp FR_F         					&kp FR_L  				&kp FR_R  		&kp FR_T		&kp FR_I				&kp FR_U
+			&kp FR_A 		&qt LCTRL FR_S 	&qt LALT FR_E 				&qt LGUI FR_N 	&qt LSHIFT FR_F    					&qt RSHIFT FR_L  		&qt RGUI FR_R	&kp RALT FR_T	&qt RCTRL FR_I			&kp FR_U
 			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 		&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
 							           													&td1  &qt LSHIFT SPACE   			&lt SHT ENTER &td0
 			>;
@@ -137,9 +147,9 @@
 		sht_layer {
 			display-name = "ShortC";
 			bindings = <
-			&kp ESC					&none					&qt LG(FR_N) LG(FR_T)		&qt LG(LS(FR_S)) LG(FR_S) 	&qt LG(FR_Q) LG(FR_W)						&kp C_MUTE 			&kp C_VOL_DN 	&kp C_VOL_UP	&none				&kp LC(LA(DEL))
+			&kp ESC					&none					&qt LG(FR_N) LG(FR_T)		&qt LG(LS(FR_S)) LG(FR_S) 	&qt LG(FR_Q) LG(FR_W)						&kp C_MUTE 			&kp C_VOL_DN 	&kp C_VOL_UP	&none				&kp LG(LC(FR_Q))
 			&none 					&none					&qt LG(LS(FR_A)) LG(FR_A) 	&qt LG(FR_X) LG(FR_C)  		&qt LG(LA(LS(FR_V))) LG(FR_V)	   			&kp LG(SPACE)		&kp LG(FR_B)	&kp LG(FR_U)	&kp LG(FR_I) 		&none 
-			&none 					&none   				&none						&kp LG(FR_Z)				&kp LG(LS(FR_Z))							&none				&none 			&none 			&none				&none
+			&kp LG(FR_COMM) 		&none   				&none						&kp LG(FR_Z)				&kp LG(LS(FR_Z))							&none				&none 			&none 			&none				&none
 																													&trans  &kp TAB 							&trans 		&trans 
 			>;
 		};
@@ -148,7 +158,7 @@
 		accent_layer {
 			display-name = "Accent";
 			bindings = <
-			&kp FR_CACI 		&kp FR_CCED 		&kp FR_OE 			&kp FR_OCIR  			&kp FR_EURO         			&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
+			&a_circ		  		&kp FR_CCED 		&kp FR_OE 			&kp FR_OCIR  			&kp FR_EURO         			&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
 			&kp FR_AGRV  		&kp FR_EACU 		&kp FR_EGRV 		&kp FR_ECIR 			&e_trem 		  				&kp FR_PIPE  		&kp FR_UNDS 		&kp FR_LICI 	&i_trem 	 	&kp FR_UGRV
 			&kp FR_AE 			&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         	&qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
 																								&trans  &trans   				&trans &trans 
@@ -160,10 +170,10 @@
 		num_layer {
 			display-name = "Num";
 			bindings = <
-			&none	&none	&kp FR_GRV 		&kp FR_TILD				&kp FR_PERC					&kp FR_SLSH &kp FR_7 &kp FR_8 &kp FR_9	&kp FR_MINS
-			&none 	&none	&kp FR_CIRC  	&kp FR_BSLS 			&kp FR_DOT        			&kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 	&kp FR_PLUS
-			&none 	&none	&kp FR_DIAE 	&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN	 		&kp FR_0 	&kp FR_1 &kp FR_2 &kp FR_3 	&kp FR_EQL
-																		&trans  &trans   			&trans &trans
+			&none		&kp FR_SECT		&kp FR_GRV			&kp FR_TILD				&kp FR_PERC							&kp FR_SLSH 		&kp FR_7 		&kp FR_8 		&kp FR_9			&kp FR_MINS
+			&none 		&none			&kp FR_CIRC			&kp FR_BSLS				&kp FR_DOT							&kp FR_ASTR 		&kp FR_4 		&kp FR_5 		&kp FR_6 			&kp FR_PLUS
+			&none		&none			&kp FR_DIAE			&qt FR_LABK FR_LPRN		&qt FR_RABK FR_RPRN					&kp FR_0 			&kp FR_1 		&kp FR_2 		&kp FR_3 			&kp FR_EQL
+																					&trans  &trans						&trans &trans
 			>;
 		};
 
