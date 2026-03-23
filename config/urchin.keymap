@@ -139,7 +139,7 @@
 			display-name = "Base";
 			bindings = <
 			&kp FR_Q 		&kp FR_C 		&kp FR_O					&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
-			&kp FR_A 		&qt LCTRL FR_S 	&qt LALT FR_E 				&qt LGUI FR_N 	&qt LSHIFT FR_F    					&qt RSHIFT FR_L  		&qt RGUI FR_R	&qt RALT FR_T	&qt RCTRL FR_I			&kp FR_U
+			&qt LCTRL FR_A 	&qt LALT FR_S 	&qt LGUI FR_E 				&qt LSHIFT FR_N &kp  FR_F    						&kp FR_L  				&qt RSHIFT FR_R	&qt RGUI FR_T	&qt RALT FR_I			&qt RCTRL FR_U
 			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 		&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
 							           													&td_nav_func  &qt LSHIFT SPACE   	&lt SHT ENTER &td_acc_num
 			>;
