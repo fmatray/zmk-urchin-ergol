@@ -149,7 +149,7 @@
 			bindings = <
 			&kp ESC					&none					&qt LG(FR_N) LG(FR_T)		&qt LG(LS(FR_S)) LG(FR_S) 	&qt LG(FR_Q) LG(FR_W)						&kp C_MUTE 			&kp C_VOL_DN 	&kp C_VOL_UP	&none				&kp LG(LC(FR_Q))
 			&none 					&none					&qt LG(LS(FR_A)) LG(FR_A) 	&qt LG(FR_X) LG(FR_C)  		&qt LG(LA(LS(FR_V))) LG(FR_V)	   			&kp LG(SPACE)		&kp LG(FR_B)	&kp LG(FR_U)	&kp LG(FR_I) 		&none 
-			&kp LG(FR_COMM) 		&none   				&kp LGUI(FR_R)						&kp LG(FR_Z)		&kp LG(LS(FR_Z))							&none				&none 			&none 			&none				&none
+			&kp LG(FR_COMM) 		&none   				&kp LG(FR_R)				&kp LG(FR_Z)				&kp LG(LS(FR_Z))							&none				&none 			&none 			&none				&none
 																													&trans  &kp TAB 							&trans 		&trans 
 			>;
 		};
