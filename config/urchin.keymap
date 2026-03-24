@@ -50,8 +50,6 @@
             bindings = <&sl ACCENT>, <&sl NUM>;
         };
 
-
-
 		// Enables holding the first mod-tap key
 		// by performing a tap-release-hold sequence.
 		// To use it: "&qt KEYCODE1 KEYCODE2"
@@ -167,12 +165,11 @@
 			>;
 		};
 
-
 		// Numbers and high frequency symbols
 		num_layer {
 			display-name = "Num";
 			bindings = <
-			&none		&kp FR_SECT		&kp FR_GRV			&kp FR_TILD				&kp FR_PERC							&kp FR_SLSH 		&kp FR_7 		&kp FR_8 		&kp FR_9			&kp FR_MINS
+			&kp ESC		&kp FR_SECT		&kp FR_GRV			&kp FR_TILD				&kp FR_PERC							&kp FR_SLSH 		&kp FR_7 		&kp FR_8 		&kp FR_9			&kp FR_MINS
 			&none 		&none			&kp FR_CIRC			&kp FR_BSLS				&kp FR_DOT							&kp FR_ASTR 		&kp FR_4 		&kp FR_5 		&kp FR_6 			&kp FR_PLUS
 			&none		&none			&kp FR_DIAE			&qt FR_LABK FR_LPRN		&qt FR_RABK FR_RPRN					&kp FR_0 			&kp FR_1 		&kp FR_2 		&kp FR_3 			&kp FR_EQL
 																					&trans  &trans						&trans &trans
@@ -195,7 +192,7 @@
 		fnc_layer {
 			display-name = "Func.";
 			bindings = <
-			&none  		&none 		&none  		&none   	&none			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5           
+			&kp ESC  	&none 		&none  		&none   	&none			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5           
 			&sk LCTRL	&sk LALT	&sk LGUI	&sk LSHIFT	&sk GLOBE		&kp F6 		&kp F7 		&kp F8 		&kp F9 		&kp F10
 			&none  		&none 		&none  		&none   	&none			&kp F11 	&kp F12 	&kp F13 	&kp F14 	&kp F15
 							  							&trans &trans 		&trans &trans  
