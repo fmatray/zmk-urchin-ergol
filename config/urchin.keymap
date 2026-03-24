@@ -61,6 +61,23 @@
 			quick-tap-ms = <300>;
 			bindings = <&kp>, <&kp>;
 		};
+		amm: mouse_arrow_move {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <300>;
+			quick-tap-ms = <300>;
+			bindings = <&mmv>, <&kp>;
+		};
+		amp: mouse_arrow_click {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <300>;
+			quick-tap-ms = <300>;
+			bindings = <&mkp>, <&kp>;
+		};
+
 	};
 
 	macros {
@@ -179,7 +196,7 @@
 			&kp ESC		&kp FR_SECT		&kp FR_GRV			&kp FR_TILD				&kp FR_PERC							&kp FR_SLSH 		&kp FR_7 		&kp FR_8 		&kp FR_9			&kp FR_MINS
 			&none 		&none			&kp FR_CIRC			&kp FR_BSLS				&kp FR_DOT							&kp FR_ASTR 		&kp FR_4 		&kp FR_5 		&kp FR_6 			&kp FR_PLUS
 			&none		&none			&kp FR_DIAE			&qt FR_LABK FR_LPRN		&qt FR_RABK FR_RPRN					&kp FR_0 			&kp FR_1 		&kp FR_2 		&kp FR_3 			&kp FR_EQL
-																					&mo NUM  &trans						&trans &mo NUM
+																					&trans  &trans						&trans &trans
 			>;
 		};
 
@@ -187,9 +204,9 @@
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
-			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LS(TAB)				&kp TAB							&kp PG_UP			&kp HOME			&kp UP				&kp END				&kp CAPS
-			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&sk GLOBE						&kp PG_DN			&kp LEFT			&kp DOWN			&kp RIGHT			&none
-			&none			&none							&none					&kp LG(FR_L)			&none							&kp LA(BSPC)		&kp BSPC			&kp DEL				&none				&none
+			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LS(TAB)				&kp TAB							&kp PG_UP			&amp LCLK HOME		&amm MOVE_UP UP		&amp RCLK END			&kp CAPS
+			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&sk GLOBE						&kp PG_DN			&amm MOVE_LEFT LEFT	&amm MOVE_DOWN DOWN	&amm MOVE_RIGHT RIGHT	&none
+			&none			&none							&none					&kp LG(FR_L)			&none							&kp LA(BSPC)		&kp BSPC			&kp DEL				&none					&none
 																											&trans &trans	    			&trans  &kp K_APP
 			>;
 		};
