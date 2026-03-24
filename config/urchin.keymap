@@ -139,7 +139,7 @@
 			display-name = "Base";
 			bindings = <
 			&kp FR_Q 		&kp FR_C 		&kp FR_O					&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
-			&qt LCTRL FR_A 	&qt LALT FR_S 	&qt LGUI FR_E 				&qt LSHIFT FR_N &kp FR_F    						&kp FR_L  				&qt RSHIFT FR_R	&qt RGUI FR_T	&qt RALT FR_I			&qt RCTRL FR_U
+			&qt LCTRL FR_A 	&qt LALT FR_S 	&qt LGUI FR_E 				&qt LSHIFT FR_N &qt GLOBE FR_F    					&qt GLOBE FR_L  		&qt RSHIFT FR_R	&qt RGUI FR_T	&qt RALT FR_I			&qt RCTRL FR_U
 			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 		&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
 							           													&td_nav_func  &qt LSHIFT SPACE   	&lt SHT ENTER &td_acc_num
 			>;
@@ -184,7 +184,7 @@
 			display-name = "Nav";
 			bindings = <
 			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LS(TAB)				&kp TAB							&kp PG_UP			&kp HOME			&kp UP				&kp END				&kp CAPS
-			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&none							&kp PG_DN			&kp LEFT			&kp DOWN			&kp RIGHT			&none
+			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&sk GLOBE						&kp PG_DN			&kp LEFT			&kp DOWN			&kp RIGHT			&none
 			&none			&none							&none					&kp LG(FR_L)			&none							&kp LA(BSPC)		&kp BSPC			&kp DEL				&none				&none
 																											&trans &trans	    			&trans  &kp K_APP
 			>;
@@ -195,9 +195,9 @@
 		fnc_layer {
 			display-name = "Func.";
 			bindings = <
-			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5          &kp F6 	&kp F7 	&kp F8 	&kp F9 	&kp F10 
-			&sk LCTRL	&sk LALT	&sk LGUI	&sk LSHIFT	&none			&none 	&none	&none 	&kp F11 &kp F12
-			&none  		&none 		&none  		&none   	&none 			&none   &none 	&none  	&none   &none 
+			&none  		&none 		&none  		&none   	&none			&kp F1 		&kp F2 		&kp F3 		&kp F4 		&kp F5           
+			&sk LCTRL	&sk LALT	&sk LGUI	&sk LSHIFT	&sk GLOBE		&kp F6 		&kp F7 		&kp F8 		&kp F9 		&kp F10
+			&none  		&none 		&none  		&none   	&none			&kp F11 	&kp F12 	&kp F13 	&kp F14 	&kp F15
 							  							&trans &trans 		&trans &trans  
 			>;
 		};
