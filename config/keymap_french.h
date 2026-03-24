@@ -97,7 +97,7 @@
 #define FR_5    LS(FR_LPRN)  // 5
 #define FR_6    LS(FR_SECT)  // 6
 #define FR_7    LS(FR_EGRV)  // 7
-#define FR_8    LS(FR_UNDS)  // 8
+#define FR_8    LS(FR_EXLM)  // 8
 #define FR_9    LS(FR_CCED)  // 9
 #define FR_0    LS(FR_AGRV)  // 0
 #define FR_DEG  LS(FR_RPRN)  // °
