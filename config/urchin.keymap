@@ -37,7 +37,7 @@
 		td_nav_func: td_nav_func {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             bindings = <&sl NAV>, <&sl FNC>;
         };
 
@@ -46,7 +46,7 @@
 		td_acc_num: td_acc_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             bindings = <&sl ACCENT>, <&sl NUM>;
         };
 
@@ -123,7 +123,7 @@
 		// both right thumb keys
 		combo_num {
 			timeout-ms = <200>;
-			key-positions = <32 33>;
+			key-positions = <30 33>;
 			bindings = <&mo NUM>;
 		};
 		// left index & middle fingers (home-row)
