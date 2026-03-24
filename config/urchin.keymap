@@ -25,6 +25,7 @@
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
+	quick-release; 
 };
 
 
@@ -36,17 +37,16 @@
 		td_nav_func: td_nav_func {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&sl NAV>, <&sl FNC>;
         };
-
 
 		// Enables switching between layers Accent and Numbers
 		// by performing a tap-dance sequence.
 		td_acc_num: td_acc_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&sl ACCENT>, <&sl NUM>;
         };
 
@@ -57,8 +57,8 @@
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
 			flavor = "tap-preferred";
-			tapping-term-ms = <500>;
-			quick-tap-ms = <500>;
+			tapping-term-ms = <300>;
+			quick-tap-ms = <300>;
 			bindings = <&kp>, <&kp>;
 		};
 	};
@@ -120,6 +120,12 @@
 			key-positions = <30 31>;
 			bindings = <&mo SETTINGS>;
 		};
+		// both right thumb keys
+		combo_num {
+			timeout-ms = <200>;
+			key-positions = <32 33>;
+			bindings = <&mo NUM>;
+		};
 		// left index & middle fingers (home-row)
 		// hold space for Figma...
 		combo_ctrl_space {
@@ -153,6 +159,7 @@
 																														&trans  &kp TAB			&trans 		&trans 
 			>;
 		};
+
 
 		// Used to type french accents and high frequency symbols
 		accent_layer {
