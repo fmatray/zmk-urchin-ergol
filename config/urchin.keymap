@@ -36,20 +36,11 @@
 
 		// Enables switching between layers NAV and Function
 		// by performing a tap-dance sequence.
-		td_nav_mouse: td_nav_mouse {
+		ltd: layer_tap_dance {
             compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&mo NAV>, <&mo MOUSE>;
-        };
-
-		// Enables switching between layers Accent and Numbers
-		// by performing a tap-dance sequence.
-		td_acc_num: td_acc_num {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <500>;
-            bindings = <&mo ACCENT>, <&mo NUM>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            bindings = <&mo>, <&mo>;
         };
 
 		// Enables holding the first mod-tap key
@@ -145,7 +136,7 @@
 			&kp FR_Q 		&kp FR_C 		&kp FR_O						&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
 			&qt LCTRL FR_A 	&qt LALT FR_S 	&qt LGUI FR_E	 				&qt LSHIFT FR_N &qt GLOBE FR_F    					&qt GLOBE FR_L  		&qt RSHIFT FR_R	&qt RGUI FR_T	&qt RALT FR_I			&qt RCTRL FR_U
 			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 			&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
-							           													&td_nav_mouse  &qt LSHIFT SPACE   		&lt SHT ENTER &mo ACCENT
+							           														&ltd NAV MOUSE  &qt LSHIFT SPACE   	&lt SHT ENTER &mo ACCENT
 			>;
 		};
 
@@ -176,9 +167,9 @@
 		num_layer {
 			display-name = "Num";
 			bindings = <
-			&kp ESC		&kp FR_SECT		&kp FR_GRV			&kp FR_TILD				&kp FR_PERC							&kp FR_SLSH 		&kp FR_7 		&kp FR_8 		&kp FR_9			&kp FR_MINS
-			&none 		&none			&kp FR_CIRC			&kp FR_BSLS				&kp FR_DOT							&kp FR_ASTR 		&kp FR_4 		&kp FR_5 		&kp FR_6 			&kp FR_PLUS
-			&none		&none			&kp FR_DIAE			&qt FR_LABK FR_LPRN		&qt FR_RABK FR_RPRN					&kp FR_0 			&kp FR_1 		&kp FR_2 		&kp FR_3 			&kp FR_EQL
+			&kp ESC		&kp FR_SECT		&kp FR_GRV			&kp FR_TILD				&kp FR_PERC							&kp FR_SLSH 		&kp FR_7 		&kp FR_8 		&kp FR_9 		&kp FR_MINS
+			&none 		&none			&kp FR_CIRC			&kp FR_BSLS				&kp FR_DOT							&kp FR_ASTR 		&kp FR_4 		&kp FR_5 		&kp FR_6 		&kp FR_PLUS
+			&none		&none			&kp FR_DIAE			&qt FR_LABK FR_LPRN		&qt FR_RABK FR_RPRN					&kp FR_0 			&kp FR_1 		&kp FR_2 		&kp FR_3 		&kp FR_EQL
 																					&trans  &trans						&trans &trans
 			>;
 		};
@@ -187,10 +178,10 @@
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
-			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)		&kp LG(FR_G)			&kp LS(TAB)				&kp TAB							&kp PG_UP			&kp HOME		&kp UP		&kp END			&kp CAPS
-			&kp LCTRL		&kp LALT						&kp LGUI				&kp LSHIFT				&kp GLOBE						&kp PG_DN			&kp LEFT		&kp DOWN	&kp RIGHT			&caps_word
-			&none			&none							&none					&kp LG(FR_L)			&none							&kp LA(BSPC)		&kp BSPC		&kp DEL		&kp K_APP				&none
-																											&trans &trans	    			&trans  &trans
+			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)	&kp LG(FR_G)		&kp LS(TAB)		&kp TAB							&kp PG_UP		&kp HOME		&kp UP		&kp END			&kp CAPS
+			&kp LCTRL		&kp LALT					&kp LGUI			&kp LSHIFT		&kp GLOBE						&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT		&caps_word
+			&none			&none						&none				&kp LG(FR_L)	&none							&kp LA(BSPC)	&kp BSPC		&kp DEL		&kp K_APP		&none
+																							&trans &trans	    			&trans  &trans
 			>;
 		};
 
