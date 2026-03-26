@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
-            bindings = <&sl NAV>, <&sl MOUSE>;
+            bindings = <&mo NAV>, <&mo MOUSE>;
         };
 
 		// Enables switching between layers Accent and Numbers
@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <500>;
-            bindings = <&sl ACCENT>, <&sl NUM>;
+            bindings = <&mo ACCENT>, <&mo NUM>;
         };
 
 		// Enables holding the first mod-tap key
@@ -63,23 +63,6 @@
 			quick-tap-ms = <300>;
 			bindings = <&kp>, <&kp>;
 		};
-		amm: mouse_arrow_move {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <300>;
-			quick-tap-ms = <300>;
-			bindings = <&mmv>, <&kp>;
-		};
-		amp: mouse_arrow_click {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <300>;
-			quick-tap-ms = <300>;
-			bindings = <&mkp>, <&kp>;
-		};
-
 	};
 
 	macros {
@@ -93,7 +76,7 @@
 
 		// Accents macro
 		a_circ: a_circ {
-				compatible = "zmk,behavior-macro";
+			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			wait-ms = <40>;
 			tap-ms = <40>;
@@ -150,14 +133,6 @@
 			timeout-ms = <200>;
 			key-positions = <32 33>;
 			bindings = <&mo FNC>;
-		};
-		// left index & middle fingers (home-row)
-		// hold space for Figma...
-		combo_ctrl_space {
-			timeout-ms = <200>;
-			key-positions = <12 13>;
-			bindings = <&kp SPACE>;
-			layers = <BASE>;
 		};
 	};
 
@@ -223,10 +198,10 @@
 		mouse_layer {
 			display-name = "Mouse";
 			bindings = <
-			&none			&none							&none					&none					&none							&none			&mkp LCLK 				&mkp MOVE_UP 		&mkp RCLK			&none
-			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&sk GLOBE						&none			&mmv MOVE_LEFT 			&mmv MOVE_DOWN 		&mmv MOVE_RIGHT 	&none
-			&none			&none							&none					&none					&none							&none			&none					&none				&none				&none
-																											&trans &trans	    			&trans  &trans
+			&none			&none							&none					&none					&none							&msc SCRL_UP	&msc SCRL_LEFT		&mmv MOVE_UP 		&msc SCRL_RIGHT		&none
+			&sk LCTRL		&sk LALT						&sk LGUI				&sk LSHIFT				&sk GLOBE						&msc SCRL_DOWN	&mmv MOVE_LEFT 		&mmv MOVE_DOWN 		&mmv MOVE_RIGHT 	&none
+			&none			&none							&none					&none					&none							&none			&no 				&none				&none 				&none
+																											&trans &trans	    			&mkp LCLK		&mkp RCLK
 			>;
 		};
 
