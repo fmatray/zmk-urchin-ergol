@@ -148,7 +148,7 @@
 		// func
 		combo_func {
 			timeout-ms = <200>;
-			key-positions = <32 33>
+			key-positions = <32 33>;
 			bindings = <&mo FNC>;
 		};
 		// left index & middle fingers (home-row)
