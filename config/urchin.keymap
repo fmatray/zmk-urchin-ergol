@@ -149,15 +149,15 @@
 							           													&td_nav_mouse  &lt RAISE SPACE   		&lt SHT ENTER 			&td_acc_num
 			>;
 		};
-
+    
 		// Raised alpha layer
 		raise_layer {
 			display-name = "Raise";
 			bindings = <
-			&kp LS(FR_Q) 		&kp LS(FR_C) 		&kp LS(FR_O)						&kp LS(FR_P) 		&kp LS(FR_W)							&kp LS(FR_J)  				&kp LS(FR_M)  		&kp LS(FR_D)		&qt FR_DQUO FR_QUOT		&kp LS(FR_Y) 
-			&qt LCTRL LS(FR_A) 	&qt LALT LS(FR_S) 	&qt LGUI LS(FR_E)	 				&qt LSHIFT LS(FR_N) &qt GLOBE LS(FR_F)    					&qt GLOBE LS(FR_L)  		&qt RSHIFT LS(FR_R)	&qt RGUI LS(FR_T)	&qt RALT LS(FR_I)		&qt RCTRL LS(FR_U)
-			&kp LS(FR_Z) 		&kp LS(FR_X) 		&qt FR_QUES FR_MINS 				&kp LS(FR_V) 		&kp LS(FR_B)         					&qt FR_COLN FR_DOT 			&kp LS(FR_H) 		&kp LS(FR_G)		&qt FR_SCLN FR_COMM		&kp LS(FR_K)
-							           																		&trans  &trans   						&trans &trans 
+			&kp LS(FR_Q) 		&kp LS(FR_C) 		&kp LS(FR_O)			&kp LS(FR_P) 		&kp LS(FR_W)							&kp LS(FR_J)  				&kp LS(FR_M)  		&kp LS(FR_D)		&qt FR_GRV FR_EXLM		&kp LS(FR_Y) 
+			&qt LCTRL LS(FR_A) 	&qt LALT LS(FR_S) 	&qt LGUI LS(FR_E)	 	&qt LSHIFT LS(FR_N) &qt GLOBE LS(FR_F)    					&qt GLOBE LS(FR_L)  		&qt RSHIFT LS(FR_R)	&qt RGUI LS(FR_T)	&qt RALT LS(FR_I)		&qt RCTRL LS(FR_U)
+			&kp LS(FR_Z) 		&kp LS(FR_X) 		&none 					&kp LS(FR_V) 		&kp LS(FR_B)         					&none			 			&kp LS(FR_H) 		&kp LS(FR_G)		&none					&kp LS(FR_K)
+							           															&trans  &trans   						&trans &trans 
 			>;
 		};
 
@@ -179,11 +179,11 @@
 			bindings = <
 			&a_circ		  		&kp FR_CCED 		&kp FR_OE 			&kp FR_OCIR  			&kp FR_EURO         			&kp FR_HASH  		&qt FR_PND FR_DLR 	&kp FR_AMPR 	&kp FR_EXLM 	&u_circ 
 			&kp FR_AGRV  		&kp FR_EACU 		&kp FR_EGRV 		&kp FR_ECIR 			&e_trem 		  				&kp FR_PIPE  		&kp FR_UNDS 		&kp FR_LICI 	&i_trem 	 	&kp FR_UGRV
-			&kp FR_AE 			&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         	&qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &none  			&none  			&kp FR_AT
+			&kp FR_AE 			&kp FR_BSLS   		&kp FR_SLSH 		&qt FR_LABK FR_LPRN 	&qt FR_RABK FR_RPRN         	&qt FR_LCBR FR_LBRC &qt FR_RCBR FR_RBRC &kp FR_AT 		&none  			&none
 																								&trans  &trans   				&trans &trans 
 			>;
 		};
-
+		
 		// Numbers and high frequency symbols
 		num_layer {
 			display-name = "Num";
