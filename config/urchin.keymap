@@ -24,7 +24,11 @@
 #define SETTINGS 8
 // -----------------
 
-	
+
+&lt {
+    tapping-term-ms = <300>; 
+};
+
 &sk {
 	// don't release mods on other mods presses
 	ignore-modifiers;
@@ -39,7 +43,7 @@
 		td_nav_mouse: td_nav_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&mo NAV>, <&mo MOUSE>;
         };
 
@@ -48,7 +52,7 @@
 		td_acc_num: td_acc_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <300>;
             bindings = <&mo ACCENT>, <&mo NUM>;
         };
 
@@ -61,6 +65,17 @@
 			flavor = "tap-preferred";
 			tapping-term-ms = <300>;
 			quick-tap-ms = <300>;
+			bindings = <&kp>, <&kp>;
+		};
+		// Enables holding the first mod-tap key
+		// by performing a tap-release-hold sequence.
+		// To use it: "&hrm KEYCODE1 KEYCODE2"
+		hrm: hrm_tap {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <2>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <500>;
+			quick-tap-ms = <500>;
 			bindings = <&kp>, <&kp>;
 		};
 
@@ -143,10 +158,10 @@
 		default_layer {
 			display-name = "Base";
 			bindings = <
-			&kp FR_Q 		&kp FR_C 		&kp FR_O						&kp FR_P 		&kp FR_W							&kp FR_J  				&kp FR_M  		&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
-			&qt LCTRL FR_A 	&qt LALT FR_S 	&qt LGUI FR_E	 				&qt LSHIFT FR_N &qt GLOBE FR_F    					&qt GLOBE FR_L  		&qt RSHIFT FR_R	&qt RGUI FR_T	&qt RALT FR_I			&qt RCTRL FR_U
-			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 			&kp FR_V 		&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 		&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
-							           													&td_nav_mouse  &lt RAISE SPACE   		&lt SHT ENTER 			&td_acc_num
+			&kp FR_Q 		&kp FR_C 		&kp FR_O						&kp FR_P 			&kp FR_W							&kp FR_J  				&kp FR_M  			&kp FR_D		&qt FR_DQUO FR_QUOT		&kp FR_Y 
+			&hrm LCTRL FR_A &hrm LALT FR_S 	&hrm LGUI FR_E	 				&hrm LSHIFT FR_N 	&hrm GLOBE FR_F    					&hrm GLOBE FR_L  		&hrm RSHIFT FR_R	&hrm RGUI FR_T	&hrm RALT FR_I			&hrm RCTRL FR_U
+			&kp FR_Z 		&kp FR_X 		&qt FR_QUES FR_MINS 			&kp FR_V 			&kp FR_B         					&qt FR_COLN FR_DOT 		&kp FR_H 			&kp FR_G		&qt FR_SCLN FR_COMM		&kp FR_K
+							           															&td_nav_mouse  &lt RAISE SPACE   	&lt SHT ENTER 			&td_acc_num
 			>;
 		};
     
@@ -154,10 +169,10 @@
 		raise_layer {
 			display-name = "Raise";
 			bindings = <
-			&kp LS(FR_Q) 		&kp LS(FR_C) 		&kp LS(FR_O)			&kp LS(FR_P) 		&kp LS(FR_W)							&kp LS(FR_J)  				&kp LS(FR_M)  		&kp LS(FR_D)		&qt FR_GRV FR_EXLM		&kp LS(FR_Y) 
-			&qt LCTRL LS(FR_A) 	&qt LALT LS(FR_S) 	&qt LGUI LS(FR_E)	 	&qt LSHIFT LS(FR_N) &qt GLOBE LS(FR_F)    					&qt GLOBE LS(FR_L)  		&qt RSHIFT LS(FR_R)	&qt RGUI LS(FR_T)	&qt RALT LS(FR_I)		&qt RCTRL LS(FR_U)
-			&kp LS(FR_Z) 		&kp LS(FR_X) 		&none 					&kp LS(FR_V) 		&kp LS(FR_B)         					&none			 			&kp LS(FR_H) 		&kp LS(FR_G)		&none					&kp LS(FR_K)
-							           															&trans  &trans   						&trans &trans 
+			&kp LS(FR_Q) 		&kp LS(FR_C) 		&kp LS(FR_O)			&kp LS(FR_P) 			&kp LS(FR_W)							&kp LS(FR_J)  				&kp LS(FR_M)  			&kp LS(FR_D)		&qt FR_GRV FR_EXLM		&kp LS(FR_Y) 
+			&hrm LCTRL LS(FR_A) &hrm LALT LS(FR_S) 	&hrm LGUI LS(FR_E)	 	&hrm LSHIFT LS(FR_N) 	&hrm GLOBE LS(FR_F)    					&hrm GLOBE LS(FR_L)  		&hrm RSHIFT LS(FR_R)	&hrm RGUI LS(FR_T)	&hrm RALT LS(FR_I)		&hrm RCTRL LS(FR_U)
+			&kp LS(FR_Z) 		&kp LS(FR_X) 		&none 					&kp LS(FR_V) 			&kp LS(FR_B)         					&none			 			&kp LS(FR_H) 			&kp LS(FR_G)		&none					&kp LS(FR_K)
+							           																&trans  &trans   						&trans &trans 
 			>;
 		};
 
