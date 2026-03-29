@@ -215,14 +215,13 @@
 			>;
 		};
 
-
 		// Main modifiers and arrow key
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
 			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)	&kp LG(FR_G)	&kp LS(TAB)		&kp TAB						&kp PG_UP		&kp HOME		&kp UP		&kp END			&kp CAPS
 			&kp LCTRL		&kp LALT					&kp LGUI		&kp LSHIFT		&kp GLOBE					&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT		&caps_word
-			&none			&none 						&none			&kp LG(FR_L)	&qt SHOW_WIN SHOW_APP		&kp LA(BSPC)	&kp BSPC		&kp DEL		&kp K_APP		&qt LC(F8) LC(F2)
+			&none			&none 						&none			&kp LG(FR_L)	&qt SHOW_APP SHOW_WIN 		&kp LA(BSPC)	&kp BSPC		&kp DEL		&kp K_APP		&qt LC(F8) LC(F2)
 																						&trans &trans	    		&trans  &trans
 			>;
 		};
