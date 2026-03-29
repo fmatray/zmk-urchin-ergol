@@ -45,7 +45,7 @@
 		td_nav_mouse: td_nav_mouse {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             bindings = <&mo NAV>, <&mo MOUSE>;
         };
 
@@ -54,7 +54,7 @@
 		td_acc_num: td_acc_num {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <500>;
             bindings = <&mo ACCENT>, <&mo NUM>;
         };
 
