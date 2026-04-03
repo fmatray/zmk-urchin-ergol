@@ -74,6 +74,17 @@
 		};
 		// Enables holding the first mod-tap key
 		// by performing a tap-release-hold sequence.
+		// To use it: "&capt KEYCODE1 KEYCODE2"
+		capt:capt {
+			compatible = "zmk,behavior-hold-tap";
+			#binding-cells = <0>;
+			flavor = "tap-preferred";
+			tapping-term-ms = <QT_TIMING>;
+			quick-tap-ms = <QT_TIMING>;
+			bindings = <&caps_word>, <&kp CAPS>;
+		};
+		// Enables holding the first mod-tap key
+		// by performing a tap-release-hold sequence.
 		// To use it: "&hrm KEYCODE1 KEYCODE2"
 		hrm: hrm_tap {
 			compatible = "zmk,behavior-hold-tap";
@@ -177,7 +188,7 @@
 			&kp LS(FR_Q) 		&kp LS(FR_C) 		&kp LS(FR_O)			&kp LS(FR_P) 			&kp LS(FR_W)							&kp LS(FR_J)  				&kp LS(FR_M)  			&kp LS(FR_D)		&qt FR_GRV FR_EXLM		&kp LS(FR_Y) 
 			&hrm LCTRL LS(FR_A) &hrm LALT LS(FR_S) 	&hrm LGUI LS(FR_E)	 	&hrm LSHIFT LS(FR_N) 	&hrm GLOBE LS(FR_F)    					&hrm GLOBE LS(FR_L)  		&hrm RSHIFT LS(FR_R)	&hrm RGUI LS(FR_T)	&hrm RALT LS(FR_I)		&hrm RCTRL LS(FR_U)
 			&kp LS(FR_Z) 		&kp LS(FR_X) 		&kp FR_UNDS 			&kp LS(FR_V) 			&kp LS(FR_B)         					&kp FR_ELLP			 		&kp LS(FR_H) 			&kp LS(FR_G)		&none					&kp LS(FR_K)
-							           																&trans  &trans   						&trans &trans 
+							           																&trans  &trans   						&trans &capt
 		>;
 		};
 
@@ -219,10 +230,10 @@
 		nav_layer {
 			display-name = "Nav";
 			bindings = <
-			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)	&kp LG(FR_G)	&kp LS(TAB)		&kp TAB						&kp PG_UP		&kp HOME		&kp UP		&kp END			&kp CAPS
-			&kp LCTRL		&kp LALT					&kp LGUI		&kp LSHIFT		&kp GLOBE					&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT		&caps_word
-			&none			&none 						&none			&kp LG(FR_L)	&qt SHOW_APP SHOW_WIN 		&kp LA(BSPC)	&kp BSPC		&kp DEL		&kp K_APP		&qt LC(F8) LC(F2)
-																						&trans &trans	    		&trans  &trans
+			&kp ESC			&qt LG(LS(FR_F)) LG(FR_F)	&qt LS(LG(FR_G)) LG(FR_G)	&kp LS(TAB)		&kp TAB						&kp PG_UP		&kp HOME		&kp UP		&kp END			&none
+			&kp LCTRL		&kp LALT					&kp LGUI					&kp LSHIFT		&kp GLOBE					&kp PG_DN		&kp LEFT		&kp DOWN	&kp RIGHT		&none
+			&none			&kp LG(FR_CIRC) 			&kp LG(FR_DLR)				&kp LG(FR_L)	&qt SHOW_APP SHOW_WIN 		&kp LA(BSPC)	&kp BSPC		&kp DEL		&kp K_APP		&qt LC(F8) LC(F2)
+																									&trans &trans	    		&trans  &trans
 			>;
 		};
 
