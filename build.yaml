@@ -13,13 +13,13 @@
 #
 ---
 include:
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: urchin_left nice_view_adapter  nice_view_gem
     # If you don't use animation replace the shield above with the one below in comment
     # shield: urchin_left nice_view_adapter  nice_view
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: urchin_right nice_view_adapter  nice_view_gem
     # If you don't use animation replace the shield above with the one below in comment
     # shield: urchin_right nice_view_adapter  nice_view
-  - board: nice_nano
+  - board: nice_nano_v2
     shield: settings_reset
