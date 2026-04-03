@@ -10,8 +10,8 @@ manifest:
     - name: duckyb
       url-base: https://github.com/duckyb
       # ulounge
-    - name: ulounge
-      url-base: https://github.com/ulounge
+    - name: m165437
+      url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -20,9 +20,9 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
-    - name: nice-view-mod   
-      remote: ulounge                       
+    - name: nice-view-gem
+      remote: m165437
       revision: main
-      # To Here            
+      
   self:
     path: config
