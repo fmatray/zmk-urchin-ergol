@@ -7,8 +7,8 @@ manifest:
     - name: caksoylar
       url-base: https://github.com/caksoylar
       # kyek / duckyb
-    - name: duckyb
-      url-base: https://github.com/duckyb
+    #- name: duckyb 
+    #  url-base: https://github.com/duckyb
     - name: m165437 #new entry
       url-base: https://github.com/M165437 #new entry
   projects:
@@ -16,9 +16,9 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: urchin-zmk-module
-      remote: duckyb
-      revision: main
+    #- name: urchin-zmk-module
+    #  remote: duckyb
+    #  revision: main
     - name: nice-view-gem #new entry
       remote: m165437 #new entry
       revision: main #new entry      
