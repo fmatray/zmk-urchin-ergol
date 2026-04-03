@@ -6,17 +6,20 @@ manifest:
       # bravekarma
     - name: caksoylar
       url-base: https://github.com/caksoylar
-      # nice-view-gem (using fork with fix for zmk_endpoint_get_selected rename until
-      # https://github.com/M165437/nice-view-gem/pull/22 is merged)
-    - name: m165437 #new entry
-      url-base: https://github.com/M165437 #new entry
+    #- name: m165437
+    #  url-base: https://github.com/M165437
+    - name: gpeye
+      url-base: https://github.com/GPeye
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: nice-view-gem
-      remote: m165437
+    #- name: nice-view-gem
+    #  remote: m165437
+    #  revision: main
+    - name: urchin-peripheral-animation
+      remote: gpeye
       revision: main
   self:
     path: config
