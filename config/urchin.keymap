@@ -40,7 +40,7 @@
 	quick-release; 
 };
 
-&nice_view_spi {
+nice_view_spi: &spi0 {
     cs-gpios = <NICE_VIEW_SPI>;
 };
 
