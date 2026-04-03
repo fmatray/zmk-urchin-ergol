@@ -1,14 +1,13 @@
 manifest:
   remotes:
-    # zmk official
+      # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
       # bravekarma
     - name: caksoylar
       url-base: https://github.com/caksoylar
-      # kyek / duckyb
-    #- name: duckyb 
-    #  url-base: https://github.com/duckyb
+      # nice-view-gem (using fork with fix for zmk_endpoint_get_selected rename until
+      # https://github.com/M165437/nice-view-gem/pull/22 is merged)
     - name: m165437 #new entry
       url-base: https://github.com/M165437 #new entry
   projects:
@@ -16,11 +15,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    #- name: urchin-zmk-module
-    #  remote: duckyb
-    #  revision: main
-    - name: nice-view-gem #new entry
-      remote: m165437 #new entry
-      revision: main #new entry      
+    - name: nice-view-gem
+      remote: m165437
+      revision: main
   self:
     path: config
