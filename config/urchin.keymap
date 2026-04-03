@@ -178,7 +178,7 @@
 			&hrm LCTRL LS(FR_A) &hrm LALT LS(FR_S) 	&hrm LGUI LS(FR_E)	 	&hrm LSHIFT LS(FR_N) 	&hrm GLOBE LS(FR_F)    					&hrm GLOBE LS(FR_L)  		&hrm RSHIFT LS(FR_R)	&hrm RGUI LS(FR_T)	&hrm RALT LS(FR_I)		&hrm RCTRL LS(FR_U)
 			&kp LS(FR_Z) 		&kp LS(FR_X) 		&kp FR_UNDS 			&kp LS(FR_V) 			&kp LS(FR_B)         					&kp FR_ELLP			 		&kp LS(FR_H) 			&kp LS(FR_G)		&none					&kp LS(FR_K)
 							           																&trans  &trans   						&trans &trans 
-			>;
+		>;
 		};
 
 		// Used for system short cuts

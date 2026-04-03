@@ -14,11 +14,11 @@
 ---
 include:
   - board: nice_nano
-    shield: urchin_left #nice_view_adapter nice_view_custom #custom shield
+    shield: urchin_left nice_view_adapter nice_view_custom #custom shield
     # If you don't use animation replace the shield above with the one below in comment
     # shield: urchin_left nice_view_adapter  nice_view
   - board: nice_nano
-    shield: urchin_right #nice_view_adapter nice_view_custom #custom shield
+    shield: urchin_right nice_view_adapter nice_view_custom #custom shield
     # If you don't use animation replace the shield above with the one below in comment
     # shield: urchin_right nice_view_adapter  nice_view
   - board: nice_nano
