@@ -40,9 +40,6 @@
 	quick-release; 
 };
 
-&nice_view_spi {
-    cs-gpios = <NICE_VIEW_SPI>;
-};
 
 / {
 	behaviors {
