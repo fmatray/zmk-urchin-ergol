@@ -14,13 +14,13 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3.0
+      revision: main
       import: app/west.yml
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
     - name: nice-view-gem #new entry
       remote: m165437 #new entry
-      revision: v0.3.0 #new entry      
+      revision: main #new entry      
   self:
     path: config
