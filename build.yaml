@@ -14,8 +14,8 @@
 ---
 include:
   - board: nice_nano@2.0.0//zmk
-    shield: urchin_left nice_view_adapter  nice_view_custom
+    shield: urchin_left nice_view_adapter  nice_view_gem
   - board: nice_nano@2.0.0//zmk
-    shield: urchin_right nice_view_adapter nice_view_custom
+    shield: urchin_right nice_view_adapter nice_view_gem
   - board: nice_nano@2.0.0//zmk
     shield: settings_reset
